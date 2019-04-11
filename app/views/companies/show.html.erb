@@ -1,0 +1,22 @@
+<h1><%=@company.name%></h1>
+
+<h3>Office Location: <%=@company.name%></h3>
+<ul>
+  <% @company.offices.each do |office| %>
+    <li><%= office.building.name%>, floor: <%= office.floor%></li>
+  <%end%>
+</ul>
+
+<h3>Employees:</h3>
+<ul>
+<%@company.employees.each do |employee|%>
+<li><%= employee.name%> <%=button_to "delete", {controller: :EmployeesController, action: 'destroy', id: employee.id}, :method => :delete%></li>
+<% end %>
+</ul>
+
+<h3>Add New Employee:</h3>
+<%=form_for employee_path do |f|%>
+  <%=f.
+
+<h3>Total Rent</h3>
+<p><%=@company.total_rent%></p>

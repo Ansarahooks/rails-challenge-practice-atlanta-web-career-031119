@@ -1,0 +1,11 @@
+<h1><%=@building.name%></h1>
+
+<h3>Companies Located in <%=@building.name%></h3>
+
+<ul>
+  <% @building.companies.each do |company|%>
+  <li><%= company.name%></li>
+  <% end %>
+</ul>
+
+<p>Total Rent: $<%=@building.offices.count * @building.rent_per_floor%></p>
